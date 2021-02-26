@@ -12,19 +12,6 @@ from selenium.webdriver.common.keys import Keys
 #change directory
 os.chdir("C:/Users/james/Desktop/Projects/ATCC_web_scraping")
 
-#for interactive webpages, use selenium
-#html_text = requests.get('https://www.atcc.org/search?title=ATCC%20Bacteria%20Alphanumeric%20(Genus%20/%20Species)#sort=%40searchlistingcardtitle%20ascending&f:contentTypeFacetATCC=[Products]&f:productcategoryFacet=[Bacteria%20%26%20Phages]')
-#print(html_text)
-#response 200 means that the call was successful
-
-#add .text at the end
-#html_text = requests.get('https://www.atcc.org/search?title=ATCC%20Bacteria%20Alphanumeric%20(Genus%20/%20Species)#sort=%40searchlistingcardtitle%20ascending&f:contentTypeFacetATCC=[Products]&f:productcategoryFacet=[Bacteria%20%26%20Phages]').text
-#soup = BeautifulSoup(html_text, 'lxml')
-
-#html = soup.prettify("utf-8")
-#with open("output1.html", "wt") as file:
-#    file.write(str(html))
-
 PATH = r"C:/chromedriver/chromedriver.exe"
 url = "https://www.atcc.org/search?title=ATCC%20Bacteria%20Alphanumeric%20(Genus%20/%20Species)#sort=relevancy&f:contentTypeFacetATCC=[Products]&f:productcategoryFacet=[Bacteria%20%26%20Phages]"
 driver = webdriver.Chrome(executable_path=PATH)
@@ -96,10 +83,9 @@ def find_jobs():
 
 if __name__ ==  '__main__':
     find_jobs()
-
+    driver.close()
 #    while True:
 #        find_jobs()
 #        time_wait = 15
 #        time.sleep(time_wait)
 
-driver.close()
