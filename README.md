@@ -1,7 +1,7 @@
 # web_scraping
 ## web scraping information from [ATCC](https://www.atcc.org/) website
 
-Required Python Packages:
+**Required Python Packages**:
 -Beautiful Soup
 -Selenium*
 </br>
