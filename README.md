@@ -1,4 +1,4 @@
-# web_scraping
+# Automated Web Scraping
 ## web scraping information from [ATCC](https://www.atcc.org/) website
 
 **Required Python Packages**: </br>
